@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#133d61" />
+    <meta name="color-scheme" content="light only" />
+    <title>INTERCOMER S.A.S — Contacto</title>
+    <meta name="description" content="Escríbenos para cotizaciones, asesorías y soporte." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+  </head>
+  <body>
+    <header class="site-header" data-shadow-on-scroll>
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="Inicio">INTERCOMER<span> S.A.S</span></a>
+    <nav id="primary-nav" class="primary-nav" aria-label="Navegación principal">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="servicio.html" class="nav-link">Servicio</a>
+      <a href="nosotros.html" class="nav-link">Nosotros</a>
+      <a href="noticias.html" class="nav-link">Noticias</a>
+      <a href="contacto.html" class="btn btn-primary">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-switch" aria-disabled="true" title="Inglés disponible más adelante">ES</button>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <main id="content">
+      <section class="page-hero">
+        <div class="container">
+          <h1 class="reveal-on-scroll">Contacto</h1>
+          <p class="lead reveal-on-scroll">Cuéntanos sobre tu operación logística. Respondemos pronto.</p>
+        </div>
+      </section>
+
+      <section class="container contact-grid">
+        <form class="card contact-form reveal-on-scroll" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+              <small class="error">Requerido</small>
+            </div>
+            <div class="field">
+              <label for="empresa">Empresa</label>
+              <input id="empresa" name="empresa" type="text" placeholder="Tu empresa">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="tu@correo.com" required>
+              <small class="error">Email inválido</small>
+            </div>
+            <div class="field">
+              <label for="telefono">Teléfono</label>
+              <input id="telefono" name="telefono" type="tel" placeholder="+57 300 000 00 00">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿Qué necesitas mover?" required></textarea>
+            <small class="error">Requerido</small>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+            <p class="form-hint">También puedes escribir a <a href="mailto:contacto@tuempresa.com">contacto@tuempresa.com</a></p>
+          </div>
+        </form>
+
+        <aside class="card contact-info reveal-on-scroll delay-1">
+          <h2>Información</h2>
+          <p><strong>Email:</strong> <a href="mailto:contacto@tuempresa.com">contacto@tuempresa.com</a></p>
+          <p><strong>Teléfono:</strong> <a href="tel:+573001112233">+57 300 111 22 33</a></p>
+          <p><strong>Dirección:</strong> Calle 33B #81‑10, La Castellana, Medellín</p>
+          <div class="map-skeleton" role="img" aria-label="Mapa de ubicación"></div>
+        </aside>
+      </section>
+    </main>
+    <footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo small">LOGÍSTICA<span>PRO</span></div>
+      <p>Soluciones ágiles en logística internacional y comercio exterior.</p>
+    </div>
+    <div class="footer-contact">
+      <p><strong>Contáctanos</strong></p>
+      <p><a href="mailto:contacto@tuempresa.com">contacto@tuempresa.com</a></p>
+      <p><a href="tel:+573001112233">+57 300 111 22 33</a></p>
+    </div>
+  </div>
+  <div class="container legal">
+    <p>© <span id="y"></span> InterComer S.A.S. Todos los derechos reservados.</p>
+  
+  </div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js" defer></script>
+
+  </body>
+</html>
