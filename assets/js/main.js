@@ -1,4 +1,3 @@
-// Header shadow on scroll
 const header = document.querySelector('.site-header');
 window.addEventListener('scroll', () => {
   const scrolled = window.scrollY > 8;
@@ -6,25 +5,24 @@ window.addEventListener('scroll', () => {
 });
 
 
-// Mobile nav toggle
+
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.getElementById('primary-nav');
 if (toggle && nav) {
   toggle.addEventListener('click', () => {
-    const isOpen = header.classList.contains('nav-open'); // header ya existe arriba
+    const isOpen = header.classList.contains('nav-open');
 
     if (!isOpen) {
-      // Abrir
+      
       header.classList.add('nav-open');
       toggle.setAttribute('aria-expanded', 'true');
       document.documentElement.classList.add('no-scroll');
     } else {
-      // Cerrar con animación
+
       header.classList.add('nav-closing');
       toggle.setAttribute('aria-expanded', 'false');
       document.documentElement.classList.remove('no-scroll');
-
-      // Al terminar la animación, ocultamos definitivamente
+      
       const onAnimEnd = () => {
         header.classList.remove('nav-open', 'nav-closing');
         nav.removeEventListener('animationend', onAnimEnd);
@@ -34,8 +32,6 @@ if (toggle && nav) {
   });
 }
 
-
-// Lightweight "reveal on scroll"
 const revealables = document.querySelectorAll('.reveal-on-scroll');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries, obs) => {
@@ -52,7 +48,6 @@ if ('IntersectionObserver' in window) {
   });
 }
 
-// Simple contact form validation (no backend; demo only)
 const form = document.getElementById('contactForm');
 if (form) {
   form.addEventListener('submit', (ev) => {
@@ -80,8 +75,8 @@ if (form) {
   });
 }
 
-const numeroWhatsApp = '573001112233'; 
-const mensajeWhatsApp = 'Hola, quiero más información sobre sus servicios.'; // <--- cámbialo aquí
+const numeroWhatsApp = '573232927692'; 
+const mensajeWhatsApp = 'Hola, quiero más información sobre sus servicios.'; // <--- cambiar el mensaje predeterminado de WhatsApp :D
 
 const botonWhatsApp = document.createElement('a');
 botonWhatsApp.href = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensajeWhatsApp)}`;
